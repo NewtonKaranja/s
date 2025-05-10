@@ -190,7 +190,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto 1rem; 
-      padding: 1rem;
+      padding: 0.3rem;
     }
 
     h2 {
@@ -223,7 +223,7 @@
 
   .menu-toggle {
     font-size: 0.5rem;
-    margin-left: 20px;
+    margin-left: 300px;
   }
 
   nav ul {
@@ -276,6 +276,7 @@
       margin: 0 0 0.5rem;
       font-weight: bold;
       color: #f97316;
+	  font-size: 0.9rem;
     }
 
     .whatsapp-button {
@@ -398,7 +399,7 @@ footer {
         background: none;
         border: none;
         font-size: 1.4rem;
-		margin-left: 80px;
+		margin-left: 90px;
       }
 
 
@@ -538,6 +539,17 @@ footer {
       margin-bottom: 1rem;
       cursor: pointer;
     }
+	p.product-description {
+  font-size: 0.70em;
+  color: #666666;
+  margin: ;
+  font-family: sans-serif;
+  line-height: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
   </style>
 </head>
 <body>
@@ -552,7 +564,7 @@ footer {
       <ul>
 	  <li><a href="index.html"><i class="fas fa-home" style="color: #10b981;"></i> Home</a></li>
         <li>
-          <a href="#products"><i class="fas fa-boxes" style="color: #3b82f6;"></i> Products</a>
+          <a href="#"><i class="fas fa-boxes" style="color: #3b82f6;"></i> Products</a>
           <div class="dropdown">
             <a href="#" onclick="filterProducts('Brake Pads')"><i class="fas fa-car"></i> Brake Pads</a>
             <a href="#" onclick="filterProducts('Oil Filter')"><i class="fas fa-tint"></i> Oil Filters</a>
@@ -629,6 +641,7 @@ footer {
     <div class="product" data-category="Brake Pads">
       <img src="pic2.jpeg" alt="Brake Pads" onclick="openLightbox(this)">
       <h3>Brake Pads</h3>
+	  <p class="product-description">Durable and reliable.</p>
       <p>KSh 3,000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
@@ -659,7 +672,7 @@ footer {
       </a>
     </div>
     <div class="product" data-category="Air Filter">
-      <img src="https://via.placeholder.com/250x200?text=Air+Filter" alt="Air Filter" onclick="openLightbox(this)">
+      <img src="bulb.jpeg" alt="Air Filter" onclick="openLightbox(this)">
       <h3>Air Filter</h3>
       <p>KSh 800</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
@@ -851,6 +864,3 @@ document.querySelectorAll('nav ul a').forEach(link => {
 </script>
 </body>
 </html>
-
-
-
