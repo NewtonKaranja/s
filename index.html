@@ -566,13 +566,16 @@ footer {
         <li>
           <a href="javascript:void(0);" onclick="event.preventDefault();"><i class="fas fa-boxes" style="color: #3b82f6;"></i> Products</a>
           <div class="dropdown">
+		    <a href="#" onclick="filterProducts('Oils')"><i class="fas fa-oil-can"></i> Oils</a>
             <a href="#" onclick="filterProducts('Brake Pads')"><i class="fas fa-car"></i> Brake Pads</a>
             <a href="#" onclick="filterProducts('Oil Filter')"><i class="fas fa-tint"></i> Oil Filters</a>
             <a href="#" onclick="filterProducts('Air Filter')"><i class="fas fa-wind"></i> Air Filters</a>
 			<a href="#" onclick="filterProducts('Spark plugs')"><i class="fas fa-bolt"></i> Spark plugs</a>
+			<a href="#" onclick="filterProducts('Coolant')"><i class="fas fa-oil-can"></i> Coolant</a>
 			<a href="#" onclick="filterProducts('Bearing')"><i class="fas fa-cogs"></i> Bearings</a>
-			<a href="#" onclick="filterProducts('Oil')"><i class="fas fa-oil-can"></i> Oils</a>
+			<a href="#" onclick="filterProducts('Bulbs')"><i class="fas fa-tools"></i> Bulbs</a>
 			<a href="#" onclick="filterProducts('Stabilizer')"><i class="fas fa-tools"></i> Stabilizer</a>
+			<a href="#" onclick="filterProducts('Grease')"><i class="fas fa-tools"></i> Grease</a>
           </div>
         </li>
         <li><a href="#contact"><i class="fas fa-phone" style="color: #10b981;"></i> Contacts</a></li>
@@ -638,83 +641,152 @@ footer {
 <main class="container">
   <h2 id="section-title">Available Auto Parts</h2>
   <div class="products" id="product-list">
-    <div class="product" data-category="Brake Pads">
+    <div class="product" data-category="Bearing">
       <img src="pic2.jpeg" alt="Brake Pads" onclick="openLightbox(this)">
-      <h3>Brake Pads</h3>
-	  <p class="product-description">Durable and reliable.</p>
+      <h3>Bearings</h3>
+	  <p class="product-description">For Passo,vits,probox</p>
       <p>KSh 3,000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-    <div class="product" data-category="Oil Filter">
-      <img src="pic3.jpeg" alt="Oil Filter" onclick="openLightbox(this)">
-      <h3>Oil Filter</h3>
-      <p>KSh 1,200</p>
+	<div class="product" data-category="Oils">
+      <img src="nissanoil.jpeg" alt="nisaan oil" onclick="openLightbox(this)">
+      <h3>Nissan CVT fluid 4L</h3>
+	   <p class="product-description">NS-2</p>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-	<div class="product" data-category="Oil Filter">
-      <img src="pic3.jpeg" alt="Oil Filter" onclick="openLightbox(this)">
-      <h3>Oil Filter 2</h3>
-      <p>KSh 1,200</p>
+    <div class="product" data-category="Bearing">
+      <img src="maxbearing.jpeg" alt="bearing" onclick="openLightbox(this)">
+      <h3>Maxpart Bearing</h3>
+	  <p class="product-description">Isuzu, </p>
+      <p>KSh 00</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-	<div class="product" data-category="Oil Filter">
-      <img src="pic3.jpeg" alt="Oil Filter" onclick="openLightbox(this)">
-      <h3>Oil Filter 3</h3>
-      <p>KSh 1,200</p>
+	<div class="product" data-category="Coolant">
+      <img src="coolant.jpeg" alt="coolant" onclick="openLightbox(this)">
+      <h3>Radiator Coolant 5L</h3>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-    <div class="product" data-category="Air Filter">
-      <img src="bulb.jpeg" alt="Air Filter" onclick="openLightbox(this)">
-      <h3>Air Filter</h3>
-      <p>KSh 800</p>
+	<div class="product" data-category="Oils">
+      <img src="toyotaoil.jpeg" alt="Oil toyota" onclick="openLightbox(this)">
+      <h3>Toyota CVT fluid 4L</h3>
+      <p>KSh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+    <div class="product" data-category="Bulbs">
+      <img src="bulb.jpeg" alt="bulb" onclick="openLightbox(this)">
+      <h3>Headlight bulbs</h3>
+      <p>KSh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	 <div class="product" data-category="Oils">
+      <img src="lexusOil.jpeg" alt="oil" onclick="openLightbox(this)">
+      <h3>Lexus Motor Oil</h3>
+	  <p class="product-description">Fully Synthetic 4 Litres</p>
+      <p>KSh </p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
 	 <div class="product" data-category="Brake Pads">
-      <img src="pic2.jpeg" alt="Brake Pads" onclick="openLightbox(this)">
-      <h3>Brake Pads 2</h3>
-      <p>KSh 3,000</p>
-      <a class="whatsapp-button" onclick="orderProduct(this)">
-        <i class="fab fa-whatsapp"></i> Order
-      </a>
-    </div>
-	 <div class="product" data-category="Oil">
-      <img src="https://via.placeholder.com/250x200?text=Air+Filter" alt="Air Filter" onclick="openLightbox(this)">
-      <h3>CVT Oil</h3>
-      <p>KSh 800</p>
+      <img src="break.jpeg" alt="break pads" onclick="openLightbox(this)">
+      <h3>Asimco Brake Pads</h3>
+	  <p class="product-description">durability and reliability</p>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
 	 <div class="product" data-category="Air Filter">
-      <img src="https://via.placeholder.com/250x200?text=Air+Filter" alt="Air Filter" onclick="openLightbox(this)">
-      <h3>Air Filter 3</h3>
-      <p>KSh 800</p>
+      <img src="air1.jpeg" alt="Air Filter" onclick="openLightbox(this)">
+      <h3>Air Filters</h3>
+	   <p class="product-description">16546-V0100</p>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-	 <div class="product" data-category="Brake Pads">
-      <img src="pic2.jpeg" alt="Brake Pads" onclick="openLightbox(this)">
-      <h3>Brake Pad 4</h3>
-      <p>KSh 3,000</p>
+	 <div class="product" data-category="Spark plugs">
+      <img src="spark.jpeg" alt="spark" onclick="openLightbox(this)">
+      <h3>Spark Plugs</h3>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-	 <div class="product" data-category="Brake Pads">
-      <img src="pic2.jpeg" alt="Brake Pads" onclick="openLightbox(this)">
-      <h3>Brake Pad 4</h3>
-      <p>KSh 3,000</p>
+	<div class="product" data-category="Bearing">
+      <img src="nsk.jpeg" alt="bearing" onclick="openLightbox(this)">
+      <h3>NSK Beraings</h3>
+	    <p class="product-description">NZE,sedan,Isuzu..</p>
+      <p>KSh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Oils">
+      <img src="atf.jpeg" alt="ATF" onclick="openLightbox(this)">
+      <h3 style="font-size:13px;">Automatic Transmission<br> Fluid (ATF)</h3>
+	    <p class="product-description">available 500ml,IL,5L</p>
+      <p>Ksh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Oils">
+      <img src="gear.jpeg" alt="gear oil" onclick="openLightbox(this)">
+      <h3>Gear Oil EP-140</h3>
+	  <p class="product-description">Powerex</p>
+	    <p class="product-description">available 500ml,IL,5L</p>
+      <p>Ksh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Oils">
+      <img src="diesel.jpeg" alt="diesel oil" onclick="openLightbox(this)">
+      <h3>Diesel Oil SAE-140</h3>
+	    <p class="product-description">available 500ml,IL,5L</p>
+      <p>Ksh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Grease">
+      <img src="og1.jpeg" alt="grease" onclick="openLightbox(this)">
+      <h3>OG Grease</h3>
+	    <p class="product-description">Genaral MP3</p>
+      <p>Ksh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Grease">
+      <img src="ak.jpeg" alt="grease" onclick="openLightbox(this)">
+      <h3>AK Bearing Grease</h3>
+	    <p class="product-description">KP3K-30</p>
+      <p>Ksh 000</p>
+      <a class="whatsapp-button" onclick="orderProduct(this)">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+	<div class="product" data-category="Oil Filter">
+      <img src="isuzfilter.jpeg" alt="oil Filter" onclick="openLightbox(this)">
+      <h3>Isuzu Oil Filters</h3>
+	   <p class="product-description">Decose Filter</p>
+      <p>KSh 000</p>
       <a class="whatsapp-button" onclick="orderProduct(this)">
         <i class="fab fa-whatsapp"></i> Order
       </a>
