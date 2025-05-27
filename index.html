@@ -1063,5 +1063,24 @@ document.querySelectorAll('nav ul a').forEach(link => {
 
 
 </script>
+	<script>
+  function orderProduct(button) {
+    const product = button.closest('.product');
+    const name = product.querySelector('h3').innerText;
+    const price = product.querySelector('p:last-of-type').innerText;
+    const img = product.querySelector('img').src;
+
+    // WhatsApp message
+    const message = `Hello, I'm interested in the following product:\n\n*${name}*\nPrice: ${price}\nImage: ${img}`;
+
+    // WhatsApp link (replace the number with your actual WhatsApp number, in international format without the +)
+    const phoneNumber = "254799118054"; // e.g., "254712345678"
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
 </body>
 </html>
