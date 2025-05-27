@@ -994,7 +994,7 @@ footer {
   const imageUrl = imgElement.src;
 
   // Compose message with image URL on a new line
-  const message = `I'm interested in buying *${productName}* from Unity Auto Spare.\n\nProduct image:\n${imageUrl}`;
+  const message = `I'm interested in buying *${productName}* from Unity Auto Spare.\nProduct image:\n${imageUrl}`;
 
   // Create WhatsApp link
   const whatsappURL = `https://wa.me/254115216672?text=${encodeURIComponent(message)}`;
@@ -1075,7 +1075,7 @@ document.querySelectorAll('nav ul a').forEach(link => {
     const img = product.querySelector('img').src;
 
     // WhatsApp message
-    const message = `Hello, I'm interested in the following product:\n\n*${name}*\nImage: ${img}`;
+    const message = `Hello, I'm interested in the following product:\n*${name}*\nImage: ${img}`;
 
     // WhatsApp link (replace the number with your actual WhatsApp number, in international format without the +)
     const phoneNumber = "254799118054"; // e.g., "254712345678"
