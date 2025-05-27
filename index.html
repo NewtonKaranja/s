@@ -986,17 +986,27 @@ footer {
   }
 
   function openLightbox(imgElement) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const orderBtn = document.getElementById('lightbox-order');
-    const product = imgElement.closest('.product');
-    const productName = product.querySelector('h3').innerText;
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const orderBtn = document.getElementById('lightbox-order');
+  const product = imgElement.closest('.product');
+  const productName = product.querySelector('h3').innerText;
+  const imageUrl = imgElement.src;
 
-    lightboxImg.src = imgElement.src;
-    orderBtn.href = `https://wa.me/254115216672?text=I'm%20interested%20in%20buying%20${encodeURIComponent(productName)}%20from%20Unity%20Auto%20Spare.%20Here%20is%20the%20product%20image:%20${encodeURIComponent(imgElement.src)}`;
+  // Compose message with image URL on a new line
+  const message = `I'm interested in buying *${productName}* from Unity Auto Spare.\n\nProduct image:\n${imageUrl}`;
 
-    lightbox.style.display = 'flex';
-  }
+  // Create WhatsApp link
+  const whatsappURL = `https://wa.me/254115216672?text=${encodeURIComponent(message)}`;
+
+  // Apply to the lightbox order button
+  orderBtn.href = whatsappURL;
+
+  // Show lightbox
+  lightboxImg.src = imageUrl;
+  lightbox.style.display = 'flex';
+}
+
 
   function closeLightbox(event) {
     const lightbox = document.getElementById('lightbox');
@@ -1006,13 +1016,7 @@ footer {
     }
   }
 
-  function orderProduct(button) {
-    const product = button.closest('.product');
-    const productName = product.querySelector('h3').innerText;
-    const productImage = product.querySelector('img').src;
-    const whatsappURL = `https://wa.me/254115216672?text=I'm%20interested%20in%20buying%20${encodeURIComponent(productName)}%20from%20Unity%20Auto%20Spare.%20Here%20is%20the%20product%20image:%20${encodeURIComponent(productImage)}`;
-    window.open(whatsappURL, '_blank');
-  }
+ 
   
 	 window.addEventListener('scroll', function() {
       const backToTopButton = document.getElementById('backToTop');
@@ -1071,7 +1075,7 @@ document.querySelectorAll('nav ul a').forEach(link => {
     const img = product.querySelector('img').src;
 
     // WhatsApp message
-    const message = `Hello, I'm interested in the following product:\n\n*${name}*\nPrice: ${price}\nImage: ${img}`;
+    const message = `Hello, I'm interested in the following product:\n\n*${name}*\nImage: ${img}`;
 
     // WhatsApp link (replace the number with your actual WhatsApp number, in international format without the +)
     const phoneNumber = "254799118054"; // e.g., "254712345678"
